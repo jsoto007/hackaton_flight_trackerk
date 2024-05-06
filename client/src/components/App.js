@@ -7,7 +7,7 @@ function App() {
 
 
     return (
-        <>
+        <div>
           <main>
             <Header />
             <Routes>
@@ -15,7 +15,7 @@ function App() {
               <Route path="/" element={ <BirdPage /> }/>
             </Routes>
           </main>
-        </>
+        </div>
       );
 }
 
