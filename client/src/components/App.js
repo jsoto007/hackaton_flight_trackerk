@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
-import BirdPage from "./BirdPage";
+// import BirdPage from "./BirdPage";
 import BirdDetail from "./BirdDetail"
 import Hero from "./Hero";
 
