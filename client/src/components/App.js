@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
-import BirdDetail from "./BirdDetail"
 import HomeContainer from "./HomeContainer";
 
 function App() {
