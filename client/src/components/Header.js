@@ -2,9 +2,9 @@ function Header() {
   return (
     <header>
       <h1>
-        Birdsy
+        Auto Tracker
         <span className="logo" role="img">
-          🕊
+          🏎️
         </span>
       </h1>
     </header>
