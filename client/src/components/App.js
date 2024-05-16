@@ -1,8 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./Header";
-// import BirdPage from "./BirdPage";
 import BirdDetail from "./BirdDetail"
-import Hero from "./Hero";
+import HomeContainer from "./HomeContainer";
 
 function App() {
 
@@ -12,8 +11,7 @@ function App() {
           <main>
             <Header />
             <Routes>
-              <Route path="/:id" element={ <BirdDetail /> }/>
-              <Route path="/" element={ <Hero /> }/>
+              <Route path="/" element={ <HomeContainer /> }/>
             </Routes>
           </main>
         </div>
