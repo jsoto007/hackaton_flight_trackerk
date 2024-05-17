@@ -5,6 +5,7 @@ const people = [
   { id: '1', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
   { id: '2', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
 
+  
 ]
 
 export default function CarList() {
