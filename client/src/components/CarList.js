@@ -4,7 +4,7 @@ import React from "react"
 const people = [
   { id: '1', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
   { id: '2', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-  // More people...
+
 ]
 
 export default function CarList() {
