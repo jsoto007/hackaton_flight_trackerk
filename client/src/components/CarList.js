@@ -2,8 +2,8 @@ import React from "react"
 
 
 const people = [
-  { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
-  { name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
+  { id: '1', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
+  { id: '2', name: 'Lindsay Walton', title: 'Front-end Developer', email: 'lindsay.walton@example.com', role: 'Member' },
   // More people...
 ]
 
@@ -40,7 +40,7 @@ export default function CarList() {
               </thead>
               <tbody className="bg-white">
                 {people.map((person) => (
-                  <tr key={person.email} className="even:bg-gray-50">
+                  <tr key={person.id} className="even:bg-gray-50">
                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3">
                       {person.name}
                     </td>
