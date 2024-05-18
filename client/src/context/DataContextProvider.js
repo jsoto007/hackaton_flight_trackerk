@@ -4,7 +4,7 @@ const DataContext = React.createContext();
 
 export default function DataContextProvider( { children } ) {
 
-  const [carData, setCarData] = useState([])
+  const [carData, setCarData] = useState("")
 
   return(
     <DataContext.Provider value={{

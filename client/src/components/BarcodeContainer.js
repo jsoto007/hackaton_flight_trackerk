@@ -1,21 +1,23 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import Html5QrcodePlugin from "./barcode/Html5QrcodePlugin";
+import VinDecoder from "./barcode/VinDecoder";
 import { DataContext } from "../context/DataContextProvider";
 
-
 export default function BarcodeContainer() {
-  
+
   const { carData, setCarData } = useContext(DataContext)
+  const [vinData, setVinData] = useState()
+
 
 
   const onNewScanResult = (decodedText, decodedResult, setDecodedResults) => {
     console.log("App [result]", decodedResult);
     console.log("DECODED:", decodedText);
-    setCarData(decodedText)
+    setVinData(decodedResult);
     setDecodedResults(decodedResult);
   };
 
-console.log(carData)
+  console.log("vinDATA:", vinData)
 
   return (
     <div>
@@ -25,6 +27,8 @@ console.log(carData)
             disableFlip={false}
             qrCodeSuccessCallback={onNewScanResult}
           />
+
+        <VinDecoder  onVinData={vinData}/>
     </div>
   )
 }

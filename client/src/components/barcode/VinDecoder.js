@@ -1,18 +1,36 @@
 
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import vinDecoder from 'vin-decode';
+import { DataContext } from "../../context/DataContextProvider";
+import { on } from "events";
 
 
 
-export default function VinDecoder( { vin } ) {
+export default function VinDecoder( { onVinData } ) {
 
-  const decodedVin = vinDecoder('WBA8E3G56GNU01814').decode();
+  const { carData } = useContext(DataContext)
 
-  console.log("decoded VIN:", decodedVin)
+  const [vinNumber, setVinNumber] = useState([])
   
+
+  useEffect(() => {
+    if (onVinData) {
+      const decodedVin = vinDecoder(`${onVinData.decodedText}`).decode();
+
+      return setVinNumber(decodedVin) 
+    }
+
+  }, [onVinData])
+
+
+  console.log("Car DATA:", carData)
+  console.log("Passed down:", onVinData)
+  console.log("decoded:", vinNumber)
+  
+
   return (
     <div>
-      <p>{decodedVin.year} {decodedVin.manufacturer}</p>
+      <p>{vinNumber.year} {vinNumber.manufacturer}</p>
     </div>
   )
 }
