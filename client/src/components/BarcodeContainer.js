@@ -6,7 +6,6 @@ export default function BarcodeContainer() {
 
   const [vinData, setVinData] = useState()
 
-
   const onNewScanResult = (decodedText, decodedResult, setDecodedResults) => {
     console.log("App [result]", decodedResult);
     console.log("DECODED:", decodedText);
@@ -14,7 +13,6 @@ export default function BarcodeContainer() {
     setDecodedResults(decodedResult);
   };
 
-  console.log("vinDATA:", vinData)
 
   return (
     <div>

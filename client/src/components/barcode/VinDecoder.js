@@ -7,7 +7,6 @@ export default function VinDecoder( { onVinData } ) {
 
 
   const [vinNumber, setVinNumber] = useState([])
-  
 
   useEffect(() => {
     if (onVinData) {
@@ -18,10 +17,6 @@ export default function VinDecoder( { onVinData } ) {
 
   }, [onVinData])
 
-
-  console.log("Passed down:", onVinData)
-  console.log("decoded:", vinNumber)
-  
 
   return (
     <div className="mb-6 bg-neutral-200 rounded-sm">
