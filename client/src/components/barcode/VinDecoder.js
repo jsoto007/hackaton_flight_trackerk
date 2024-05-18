@@ -16,7 +16,6 @@ export default function VinDecoder( { onVinData } ) {
 
   }, [onVinData])
 
-
   return (
     <div className="mb-6 bg-neutral-200 rounded-sm">
       <p>
