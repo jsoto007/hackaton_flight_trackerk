@@ -20,7 +20,12 @@ export default function VinDecoder( { onVinData } ) {
 
   return (
     <div className="mb-6 bg-neutral-200 rounded-sm">
-      <p><em className="font-bold">Year:</em> {vinNumber.year} <em className="font-bold">Manufacturer:</em> {vinNumber.manufacturer}</p>
+      <p>
+        <em className="font-bold"> Year:</em>
+        <em className="bg-slate-100 rounded-md px-1 mx-2">{vinNumber.year}</em>
+        <em className="font-bold">Manufacturer:</em>
+        <em className="bg-slate-100 rounded-md px-1 mx-2">{vinNumber.manufacturer}</em>
+        </p>
     </div>
   )
 }
