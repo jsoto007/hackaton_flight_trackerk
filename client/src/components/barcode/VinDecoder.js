@@ -5,7 +5,6 @@ import vinDecoder from 'vin-decode';
 
 export default function VinDecoder( { onVinData } ) {
 
-
   const [vinNumber, setVinNumber] = useState([])
 
   useEffect(() => {
