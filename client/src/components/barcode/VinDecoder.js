@@ -1,8 +1,6 @@
 
 import React, { useContext, useEffect, useState } from "react";
 import vinDecoder from 'vin-decode';
-import { DataContext } from "../../context/DataContextProvider";
-
 
 
 export default function VinDecoder( { onVinData } ) {
