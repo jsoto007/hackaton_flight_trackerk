@@ -24,6 +24,7 @@ export default function BarcodeContainer() {
         fps={10}
         qrbox={50}
         disableFlip={false}
+        
         qrCodeSuccessCallback={onNewScanResult}
       />
 
