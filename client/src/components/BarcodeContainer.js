@@ -1,10 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Html5QrcodePlugin from "./barcode/Html5QrcodePlugin";
 import VinDecoder from "./barcode/VinDecoder";
 
 export default function BarcodeContainer() {
 
-  const [vinData, setVinData] = useState()
+  const [vinData, setVinData] = useState();
 
   const onNewScanResult = (decodedText, decodedResult, setDecodedResults) => {
     console.log("App [result]", decodedResult);
@@ -12,7 +12,6 @@ export default function BarcodeContainer() {
     setVinData(decodedResult);
     setDecodedResults(decodedResult);
   };
-
 
   return (
     <div>
@@ -24,10 +23,8 @@ export default function BarcodeContainer() {
         fps={10}
         qrbox={50}
         disableFlip={false}
-        
         qrCodeSuccessCallback={onNewScanResult}
       />
-
     </div>
-  )
+  );
 }
