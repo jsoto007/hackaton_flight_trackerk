@@ -14,7 +14,6 @@ export default function BarcodeContainer() {
     setDecodedResults(decodedResult);
   };
 
-
   return (
     <div>
        <Html5QrcodePlugin
