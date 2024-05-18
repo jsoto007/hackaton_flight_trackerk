@@ -21,14 +21,17 @@ export default function BarcodeContainer() {
 
   return (
     <div>
-       <Html5QrcodePlugin
-            fps={10}
-            qrbox={50}
-            disableFlip={false}
-            qrCodeSuccessCallback={onNewScanResult}
-          />
+      <VinDecoder  
+        onVinData={vinData}
+      />
 
-        <VinDecoder  onVinData={vinData}/>
+      <Html5QrcodePlugin
+        fps={10}
+        qrbox={50}
+        disableFlip={false}
+        qrCodeSuccessCallback={onNewScanResult}
+      />
+
     </div>
   )
 }
