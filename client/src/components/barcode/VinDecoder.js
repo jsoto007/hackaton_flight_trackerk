@@ -7,7 +7,6 @@ import { DataContext } from "../../context/DataContextProvider";
 
 export default function VinDecoder( { onVinData } ) {
 
-  const { carData } = useContext(DataContext)
 
   const [vinNumber, setVinNumber] = useState([])
   
@@ -22,7 +21,6 @@ export default function VinDecoder( { onVinData } ) {
   }, [onVinData])
 
 
-  console.log("Car DATA:", carData)
   console.log("Passed down:", onVinData)
   console.log("decoded:", vinNumber)
   
