@@ -1,11 +1,9 @@
 import React, { useState, useContext } from "react";
 import Html5QrcodePlugin from "./barcode/Html5QrcodePlugin";
 import VinDecoder from "./barcode/VinDecoder";
-import { DataContext } from "../context/DataContextProvider";
 
 export default function BarcodeContainer() {
 
-  const { carData, setCarData } = useContext(DataContext)
   const [vinData, setVinData] = useState()
 
 
