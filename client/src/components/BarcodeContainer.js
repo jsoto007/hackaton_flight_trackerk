@@ -11,8 +11,11 @@ export default function BarcodeContainer() {
   const onNewScanResult = (decodedText, decodedResult, setDecodedResults) => {
     console.log("App [result]", decodedResult);
     console.log("DECODED:", decodedText);
+    setCarData(decodedText)
     setDecodedResults(decodedResult);
   };
+
+console.log(carData)
 
   return (
     <div>
