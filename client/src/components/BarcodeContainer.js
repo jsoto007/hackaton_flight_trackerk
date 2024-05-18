@@ -1,12 +1,24 @@
 import React from "react";
-import BarcodeReader from "./barcode/BarcodeReader";
+import Html5QrcodePlugin from "./barcode/Html5QrcodePlugin";
+
 
 
 export default function BarcodeContainer() {
+  
+  const onNewScanResult = (decodedText, decodedResult, setDecodedResults) => {
+    console.log("App [result]", decodedResult);
+    console.log("Decoded", decodedText);
+    setDecodedResults(decodedResult);
+  };
 
   return (
     <div>
-      <BarcodeReader />
+       <Html5QrcodePlugin
+            fps={10}
+            qrbox={50}
+            disableFlip={false}
+            qrCodeSuccessCallback={onNewScanResult}
+          />
     </div>
   )
 }
