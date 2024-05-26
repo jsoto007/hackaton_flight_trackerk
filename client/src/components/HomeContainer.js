@@ -7,7 +7,6 @@ export default function HomeContainer() {
   return(
     <div>
       <CarList />
-      <UserLocation />
     </div>
   )
 }
